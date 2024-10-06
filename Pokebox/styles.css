@@ -1,0 +1,662 @@
+
+header { /*  parametres du haut    */
+    background-color: rgb(255, 255, 255); /*Arrier plan du haut     */
+    width:  100%; /*Largeur      */
+    height: 5em; /*   Hauteur   */
+    white-space: nowrap; /*  Ne pas faire sauter dans autre ligne    */
+    padding: 0px; /*   marges a l'interieur   */
+    font-weight: 400; /*   faire pas trop gras   */
+    z-index: 100; /*   faire le plus visible (donner priorité)   */
+    
+    box-sizing: border-box; 
+    display: flex; /*  faire flexible    */
+
+}
+
+
+body { /*   parametres principales   */
+    margin: 0px; /*Marges dehors*/
+    padding: 0px; /*Marges mais a l'interieur*/
+   
+    background-color: rgb(0, 0, 0); /*Couleur arriere plan*/
+    font-family: "Open Sans", sans-serif; /*Type de style*/
+    /*Faire tout en horizontal*/
+    
+
+    
+}
+
+.menu { /* parametres du menu     */
+   flex-direction: row; /*  tout faire verticalement    */
+    text-decoration: none; /* enlever decoration, ex. souligner     */
+    gap: 5em; /*   marges entre text   */
+    text-emphasis: none; /*  eencore enlever déco    */
+    padding: 0px;
+    margin:0px; /*  marges exterieurs    */
+   position: fixed; /* fiwxer sur ecran      */
+    display: flex;
+    text-align: center; /*  aligner text au center    */
+    justify-content: center;
+    width: 100%;
+    height: 5em;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    
+}
+
+.a {
+    color: aliceblue; /* couleur du text     */
+    font-size: 10em;
+    
+}
+
+.background {
+    width: 100vh;
+}
+
+.a :hover {
+    color: #FED724; /*Animation du text      */
+    transition: 0.5s;
+}
+
+.ok {
+    width: 4em; /* les dimensions du logo Pokebox     */
+    height: 4em;
+
+}
+
+.information {  /* contenu accueil     */
+    background-color: rgba(0, 0, 0, 0.065);
+    top: 0;
+    left: 0;
+   display: flex;
+   max-width: max-content; /* faire dimensions au max     */
+   width: auto;
+   
+}
+
+.overlay { /*  containeur poiur video    */
+    pointer-events: none; /* enlever déco du text     */
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent 100%);
+    top: 0;
+    left: 0;
+    max-width: max-content;
+    width: 100%;
+}
+
+video { /*  video dans containeur    */
+    width: 100%;
+    height: 100%;
+    
+    z-index: -10;
+    object-fit: cover; /*  faire remplir sur tout containeur    */
+    display: inline-block; /*  faire en verticalement    */
+    position: relative; /*  position relative pour mettre du text    */
+    
+    
+    
+}
+
+
+
+
+.item, a { /*  styles pour liens    */
+    text-decoration: none;
+    text-align: center;
+    color: #000000ae;
+    display: flex;
+    text-align: center;
+    text-emphasis: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu :hover { /* animation de texte menu     */
+    color: #fcd111;
+    transition: 0.3s; /*animation text      */
+}
+
+
+.infos { /*  text sur video    */
+   text-align: center;
+   word-wrap: break-word; /*  si remplir la ligne faire recuiler au prochaine    */
+   color: aliceblue;
+   font-size: 3.5vw;
+   display: flex;
+   position: absolute; /*  position pour position où on veut    */
+   text-shadow: /*   shadow pour le texte   */
+      0 0 7px #fff;
+   padding-top: 15%;
+   padding-left: 25%;
+   padding-right: 25%;
+   padding-bottom: 20%;
+   z-index: 12;
+   align-items: center;
+   
+}
+
+
+
+.services { /*containeur secondaire de acceuil      */
+    height: 1000px;
+    width: auto;
+    color: white;
+    width: 100%;
+    
+
+    
+    
+}
+
+@media screen and (max-width: 768px) { /* propriété pour differents dimensions     */
+    .cards-content2 {
+        grid-template-columns: repeat(2, 1fr); /*  grid 2x3    */
+    }
+
+    .finally2 {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .cards {
+        gap: 5vw;
+    }
+
+    .finally {
+        width: 25vw;
+        height:auto;
+    }
+
+    .how-use {
+        font-size: 3vw;
+    }
+
+    .card2 {
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    .carte2 {
+        width: 60%;
+        height: 70%;
+    }
+
+    .services-title {
+        font-size: 4vw;
+    }
+
+    .services-title2 {
+        font-size: 4vw;
+    }
+
+    .footer {
+        font-size: 1.5vh;
+    }
+}
+
+    
+
+
+@media screen and (max-width: 480px) { /* Dimensions pour 480 changements     */
+    .cards-content2 {
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .cards {
+        gap: 5vw;
+    }
+
+    .trends-text {
+        font-size: 2vw;
+    }
+
+    .title-text {
+        font-size: 1.5em;
+    }
+
+    .services-title2 {
+        font-size: 1.5em;
+    }
+
+    header {
+        font-size: 1vw;
+    }
+
+    .footer {
+        font-size: 2vw;
+    }
+
+    .finally2 {
+        height: 30vh;
+        width: 25vh;
+    }
+
+    .finally {
+        width: 25vw;
+        height:auto;
+    }
+
+    .card2 {
+        width: 100%;
+        height: 100%;
+        font-size: 5vw;
+    }
+
+    .services-title {
+        font-size: 8vw;
+    }
+
+    .carte2 {
+        width: 50%;
+        height: 60%;
+    }
+
+    
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        font-size: 1.8vh;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        font-size: 1.2vh;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    header {
+        font-size: 0.8vh;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    header {
+        font-size: 0.5vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cards-content2 {
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+
+    .finally2 {
+        height: 20vw;
+        width: 20vw;
+    }
+
+    .card2 {
+        font-size: 1.5vw;
+        
+    }
+
+    .carte2 {
+        width: 70%;
+        height: 80%;
+    }
+
+    .services-title {
+        font-size: 3vw;
+    }
+
+    .services-title2 {
+        font-size: 4vw;
+    }
+
+    header {
+        font-size: 2vh;
+    }
+    .cards {
+        gap: 10vw;
+    }
+}
+
+
+
+
+
+
+
+.main { /* Contanieur de Contenu principal     */
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+}
+
+main { /* Contenu principal     */
+   width: 100%;
+   height: auto;
+   max-height: max-content;
+    max-width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+
+
+.info2 { /* Containeur pour parler que cest meilleur site :)    */
+    display:flex;
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    word-wrap: break-word;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.info-22 { /* justifier contenu du text     */
+    text-align: center;
+    justify-content: end;
+    
+}
+
+.info-2 { /* faire plus visible le text     */
+    font-size: 1.5vw;
+    padding-top: 20%;
+    padding-right: 5%;
+   justify-content: end;
+   text-align: end;
+   display: flex;
+    margin: 0px;
+    word-wrap: break-word;
+    text-shadow:
+      0 0 30px #fff;
+
+    
+}
+
+.neo-pikachu { /*   parametres du image de neon pikachu   */
+    justify-content: start;
+    align-items: flex-start; /*  de le faire tout en haut    */
+    display: flex;
+    text-align: start;
+    padding-top: 10%;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box; /* faire carée du image     */
+
+}
+
+.services { /*  Services    */
+    height: auto;
+    width: 100%;
+   
+    display: block;
+    background-color: #5e0710;
+    margin-top: 10%;
+    border: 0.2vw solid #ff000067;
+    box-shadow: 0 0 90px #ff0000;
+}
+
+.products { /*  Produits    */
+    margin-top: 20%;
+    height: auto;
+    width: 100%;
+    color: aliceblue;
+    display: block;
+    background-color: #073d5e;
+    justify-content: center;
+    border: 0.2vw solid #00bbff67;
+    box-shadow: 0 0 90px #0099ff;
+}
+
+.title-text { /*  Titre du services    */
+    display: flex;
+    justify-content: center;
+    text-shadow:
+      0 0 30px #fff;
+}
+
+.neon-pikachu { /*  largeur du image pikachu    */
+    width: 90%;
+}
+
+
+.finally { /* Containeur de carte, (bordures)     */
+  
+   
+    border: 0.3vw solid white;
+    box-shadow: 0 0 900px #ff0000;
+    background-color: hsl(354, 77%, 27%);
+   border-radius: 5%;
+}
+
+.card { /* dimensions containeur carte     */
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1vw;
+    
+   
+}
+
+
+
+.cards { /* containeur des cartes     */
+    width: auto;
+    height: auto;
+    
+    text-align: center;
+    display: flex;
+    white-space: nowrap;
+    
+}
+
+.carte { /* dimensions carte     */
+    width: 100%;
+    height: 100%;
+    
+}
+
+.cards-content { /*Conatneur pour cartes (suite)      */
+    display: grid;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+    text-shadow:
+      0 0 900px #fff;
+}
+
+.division { /* division en 2 containeurs des cartes pruduits     */
+    display: grid; /* faire grid, car cest plus pratique avec cartes     */
+   justify-items: center;
+  
+
+
+    
+}
+
+.title-cards { /* nom du carte     */
+    font-size: 4vw;
+    text-shadow:
+      0 0 900px #fff;
+    
+}
+
+
+
+.cards-content2 { /* Deuxieme partie du containeur     */
+   display: grid;
+    width: 100%;
+    height: auto;
+    text-shadow:
+      0 0 900px #fff;
+      justify-content: center;
+    justify-items: center;
+    
+}
+
+.division2 { /*  containeur de division    */
+    display: flex;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10vw;
+    flex: 1 0 calc(33.33% - 20px);  /*  Pour chaque ligne, faire apparaitre par 3    */
+    align-items: start;
+    
+    
+    
+}
+
+.cards2 { /* containeur de 2eme partie de division     */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1vw;
+    text-align: center;
+    white-space: nowrap;
+    
+  
+   
+    
+}
+
+.card2 { /*   containeur de cartes   */
+    justify-content: center;
+    justify-items: center;
+    display: grid;
+    
+   
+   
+}
+
+.finally2 { /*  Encore un containeur pour cartes    */
+    display: flex;
+    border: 0.2vw solid white;
+    box-shadow: 0 0 900px #0099ff;
+    background-color: hsl(215, 77%, 27%);
+   border-radius: 5%; /*  faires bordures rondes    */
+   justify-content: center;
+   align-items: center;
+   justify-items: center;
+
+   
+   
+}
+
+
+
+.how { /*containeur de comment utiliser appli      */
+    margin-top: 20vw;
+    width: 100%;
+    height: 45vw;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.how-use { /*  explication comment utuliser    */
+    width: 90%;
+    justify-content: center;
+    text-shadow: 0 0 30px #fff;
+   margin-left: 5%;
+   margin-right: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+.title-use { /*   titre coimment utiliser   */
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    text-shadow: 0 0 30px #fff;
+}
+
+.using-site { /* Containeur pour montrer comment utiliser     */
+    width: 100%;
+    height: 10%;
+    display: inline-flex;
+    justify-content: center;
+    text-shadow: 0 0 900px #fff;
+    gap: 5%;
+    padding: 0px;
+}
+
+.trade-icon { /*Image de trade      */
+    display: flex;
+    padding-top: 3vw;
+    width: 10vw;
+    height: 12vw;
+}
+
+.trade-text { /*  Text Client    */
+    font-size: 5vw;
+    height: 20%;
+    padding: 0px;
+    text-shadow: 0 0 900px #20a31d;
+    color: #ffffffbe;
+    -webkit-animation: glow2 1s ease-in-out infinite alternate; /* Keyframe  pour utiliser glow animation, couleur etc.    */
+    -moz-animation: glow2 1s ease-in-out infinite alternate;
+    animation: glow2 1s ease-in-out infinite alternate;
+  
+}
+
+.trade-text2 { /*Text Vendeur      */
+    -webkit-animation: glow 1s ease-in-out infinite alternate; /* Meme chose keyframe     */
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    font-size: 5vw;
+    text-shadow: 0 0 30px #7519FF;
+    color: #ffffffaf ;
+    padding: 0px;
+    height: 20%;
+}
+
+.footer { /* Containeur du bas du page     */
+    width: 100%;
+    height: 15vw;
+    background: linear-gradient(to top, rgb(58, 58, 58), transparent 100%);
+    display:inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+   
+  
+}
+
+@keyframes glow  { /*  Animatiuon de vendeur et glow    */
+    from {
+      text-shadow: 0 0 10px #6600ff, 0 0 20px #6600ffcb, 0 0 30px #7519ffbf, 0 0 40px #7519FF, 0 0 50px #7519ffb5, 0 0 60px #7519ffa9, 0 0 70px #7519ffa1;
+    }
+    to {
+      text-shadow: 0 0 20px #6600ff47, 0 0 30px #6600ff4e, 0 0 40px #6600ff5a, 0 0 50px #6600ff4d, 0 0 60px #6600ff4b, 0 0 70px #6600ff25, 0 0 80px #6600ff14;
+    }
+  }
+
+@keyframes glow2 { /*Et pour Client      */
+    from {
+        text-shadow: 0 0 10px #1fa31dba, 0 0 20px #1fa31dac, 0 0 30px #1fa31dae, 0 0 40px #1fa31daf, 0 0 50px #1fa31db2, 0 0 60px #1fa31db2, 0 0 70px #1fa31dbd;
+      }
+      to {
+        text-shadow: 0 0 20px #19a31747, 0 0 30px #19a3174e, 0 0 40px #19a31752, 0 0 50px #19a3174e, 0 0 60px #19a31743, 0 0 70px #19a31741, 0 0 80px #19a31732;
+      }
+}
+
+.change, .sell, .buy { /* Faire certaines mots differents coueleur     */
+    color: red;
+    text-shadow: 0 0 30px red;
+}
+
+.top { /* parametres du "#1" de accueil     */
+    color: #088DB2;
+    text-shadow: 0 0 90px #0ac5f8;
+    font-size: 10vw;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
